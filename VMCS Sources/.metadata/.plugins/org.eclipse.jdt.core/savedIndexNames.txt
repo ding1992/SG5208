@@ -1,0 +1,1 @@
+INDEX VERSION 1.130+C:\Users\ding.guorui\Desktop\VMCS Sources\.metadata\.plugins\org.eclipse.jdt.core

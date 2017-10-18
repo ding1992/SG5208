@@ -1,0 +1,6 @@
+package sg.edu.nus.iss.vmcs.system;
+import java.util.Properties;
+
+public interface LoadPropertyStrategy {
+	public Properties loadProperties();
+}
