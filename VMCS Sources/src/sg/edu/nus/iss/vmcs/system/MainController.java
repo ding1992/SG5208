@@ -66,8 +66,8 @@ public class MainController {
 			DrinkPropertyLoader drinksLoader =
 				new DrinkPropertyLoader(Environment.getDrinkPropFile());
 			LoadPropertyStrategyFactory factory = new LoadPropertyStrategyFactory();
-			cashLoader.SetLoadPropertyStrategy(factory.createStrategy("TEXT"));
-			drinksLoader.SetLoadPropertyStrategy(factory.createStrategy("TEXT"));
+			cashLoader.SetLoadPropertyStrategy(factory.createStrategy(Environment.getCashPropFileType()));
+			drinksLoader.SetLoadPropertyStrategy(factory.createStrategy(Environment.getDrinkPropFileType()));
 			cashLoader.initialize();
 			drinksLoader.initialize();
 			storeCtrl = new StoreController(cashLoader, drinksLoader);

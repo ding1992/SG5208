@@ -21,10 +21,13 @@ import sg.edu.nus.iss.vmcs.util.*;
 public class Environment {
 	/**This constant attribute identify the drink property filename*/
 	public final static String DRINK_PROP_FILE = "drinkFile";
+	public final static String DRINK_PROP_FILE_TYPE = "drinkFileType";
 	/**This constant attribute identify the cash property filename*/
 	public final static String CASH_PROP_FILE = "cashFile";
+	public final static String CASH_PROP_FILE_TYPE = "cashFileType";
 	/**This constant attribute denotes the password string*/
 	public final static String PASSWORD = "password";
+	public final static String VMCS_DB = "dbConnect";
 
 	private static Properties prop;
 
@@ -54,7 +57,9 @@ public class Environment {
 	public static String getDrinkPropFile() {
 		return prop.getProperty(DRINK_PROP_FILE);
 	}
-
+	public static String getDrinkPropFileType() {
+		return prop.getProperty(DRINK_PROP_FILE_TYPE);
+	}
 	/**
 	 * This method returns the name/ location of the CashStore properties file.
 	 * @return the mane of the CashStore properties file.
@@ -65,11 +70,21 @@ public class Environment {
 		return fn;
 	}
 
+	public static String getCashPropFileType() {
+		String fn;
+		fn = prop.getProperty(CASH_PROP_FILE_TYPE);
+		return fn;
+	}
 	/**
 	 * if you put password in the property file, the password is obtained here.
 	 * @return the password
 	 */
 	public static String getPassword() {
 		return prop.getProperty(PASSWORD);
+	}
+	public static String getDBString() {
+		String fn;
+		fn = prop.getProperty(VMCS_DB);
+		return fn;
 	}
 }//End of class Environment
